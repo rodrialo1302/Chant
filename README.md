@@ -1,3 +1,3 @@
 # Chant
 
-Android app written in Kotlin. Consists of a social networks for soccer enthusiasts.
+Android app written in Kotlin. It consists of a social network for soccer enthusiasts.
