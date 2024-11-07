@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="16dp" >
+
+<!-- Profile Picture -->
+<ImageView
+    android:id="@+id/imageViewProfile"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:src="@drawable/ic_profile"
+    android:scaleType="centerCrop"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="16dp"/>
+
+<!-- Full Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewProfile"
+        android:layout_marginTop="30dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        app:hintEnabled="false"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+
+        <EditText
+            android:id="@+id/fullName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nombre Completo"
+            android:paddingTop="20dp"
+            android:inputType="text"
+            android:maxLength="40"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!-- Preferred Soccer Team -->
+    <!-- Biography -->
+
+    <Spinner
+        android:id="@+id/selectTeamLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/userTeamModProfile"
+        android:layout_marginTop="10dp"
+        android:spinnerMode="dropdown" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextBiographyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectTeamLayout"
+        android:layout_marginTop="30dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="255"
+        app:hintEnabled="false"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+
+
+        <EditText
+            android:id="@+id/editTextBiography"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:hint="Biografía"
+            android:maxLength="255"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!-- Cancel Button -->
+
+    <!-- Confirm Button -->
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="33dp"
+        android:text="Cancelar" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="33dp"
+        android:text="Confirmar" />
+
+    <TextView
+        android:id="@+id/currentTeamInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextFullName"
+        android:layout_marginTop="24dp"
+        android:text="Current Team:" />
+
+    <TextView
+        android:id="@+id/currentTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextFullName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/currentTeamInfo"
+        tools:text="Real Madrid" />
+
+    <ImageView
+        android:id="@+id/userTeamModProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/editTextFullName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/currentTeam" />
+
+
+</RelativeLayout>
